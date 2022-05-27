@@ -25,6 +25,40 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
+if string.sub(msg:lower(), 0, 6) == prefix.."fixbp" then
+ local plr = string.sub(msg:lower(), 9)
+		game.Players:Chat(prefix.."trap "..plr)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-500.99981689453, 0.10156404972076, 0))
+		wait(0.10)
+		game.Players:Chat("jail me")
+		game.Players:Chat("tp "..plr.." me")
+		wait(0.25)
+		
+		local target = Workspace_Folder.Baseplate
+		function movepart()
+			local cf = game.Players.LocalPlayer.Character.HumanoidRootPart
+			local looping = true
+			spawn(function()
+				while true do
+					game:GetService('RunService').Heartbeat:Wait()
+					game.Players.LocalPlayer.Character['Humanoid']:ChangeState(11)
+					cf.CFrame = target.CFrame * CFrame.new(-1*(target.Size.X/2)-(game.Players.LocalPlayer.Character['Torso'].Size.X/2), 0, 0)
+					if not looping then break end
+				end
+			end)
+			spawn(function() while looping do wait(.1) game.Players:Chat('unpunish me') end end)
+			wait(0.25)
+			looping = false
+		end
+	movepart()
+wait(0.75)
+		
+	game.Players:Chat("tp me "..plr)
+end
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 9) == prefix.."capture" then
 notif("Capturing person...")
 wait(.1)
