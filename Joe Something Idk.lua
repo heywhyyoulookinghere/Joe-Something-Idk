@@ -52,12 +52,12 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 9) == prefix.."capture" then
+if string.sub(msg:lower(), 0, 8) == prefix.."capture" then
 notif("Capturing person...")
 wait(.1)
-say("freeze "..string.sub(msg:lower(), 11))
-say("name "..string.sub(msg:lower(), 11))
-say("thaw "..string.sub(msg:lower(), 11))
+say("freeze "..string.sub(msg:lower(), 10))
+say("name "..string.sub(msg:lower(), 10))
+say("thaw "..string.sub(msg:lower(), 10))
 wait(.1)
 notif("Captured them!")
 end
