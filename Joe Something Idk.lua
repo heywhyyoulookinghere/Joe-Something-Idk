@@ -17,6 +17,12 @@ function regen()
 fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
 end
 
+function endlogs()
+for i = 1,10000 do
+say("ff ___ENDING LOGS HAHAA___")
+end
+end
+
 game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 8) == prefix.."prefix " then
 prefix = string.sub(msg:lower(), 9, 9)
@@ -82,6 +88,8 @@ wait(.1)
 say("skydive me")
 wait(.1)
 say("reset me")
+wait(.1)
+endlogs()
 end
 end)
 
@@ -98,6 +106,8 @@ wait(.1)
 say("skydive me")
 wait(.1)
 say("reset me")
+wait(.1)
+endlogs()
 end
 end)
 
@@ -105,7 +115,7 @@ game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 10) == prefix.."crashlogs" then wait(.1)
 notif("Crashing logs...")
 wait(0.1)
-for i = 1,100 do
+for i = 1,1000 do
    say("ff __CLEARING LOGS HAHAH__")
 end
 wait(0.1)
