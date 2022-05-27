@@ -17,6 +17,13 @@ function regen()
 fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
 end
 
+function message()
+for i = 1,1000 do
+wait()
+say("h also please no abusing or taking all pads, i'll retaliate.")
+end
+end
+
 function endlogs()
 for i = 1,10000 do
 wait()
@@ -128,6 +135,8 @@ notif("Resetting pads..")
 wait(0.1)
 regen()
 notif("Resetted pads.")
+wait()
+message()
 end
 end)
 
