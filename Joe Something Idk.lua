@@ -18,7 +18,7 @@ fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.Clic
 end
 
 function message()
-for i = 1,1000 do
+for i = 1,20 do
 wait()
 say("h also please no abusing or taking all pads, i'll retaliate.")
 end
