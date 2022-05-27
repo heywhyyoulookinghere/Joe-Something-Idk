@@ -4,6 +4,7 @@
 	
 local say = function(...)game.Players:Chat(...)end
 local prefix = ":"
+local override = "?"
 
 function notif(msg)
 game.StarterGui:SetCore("SendNotification", {
@@ -15,14 +16,14 @@ end
 
 
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
-if string.sub(msg:lower(), 0, 8) == prefix.."prefix " then
+if string.sub(msg:lower(), 0, 8) == prefix.."prefix " or override.."prefix " then
 prefix = string.sub(msg:lower(), 9, 9)
 notif("Prefix set to '"..string.sub(msg:lower(), 9, 9).."'")
 end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg, 0, 9) == prefix.."coolcmds" then wait(.1)
+if string.sub(msg, 0, 9) == prefix.."coolcmds" or override.."coolcmds" then wait(.1)
 notif("Check console for commands.")
 wait(.1)
 print("---------------------MAIN COMMANDS--------------------------")
@@ -40,7 +41,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg, 0, 4) == prefix.."rj" then wait(.1)
+if string.sub(msg, 0, 4) == prefix.."rj" or override.."rj" then wait(.1)
 local place = game:GetService("TeleportService")
 local player = game:GetService("Players").LocalPlayer
 place:Teleport(game.PlaceId, player)
@@ -48,7 +49,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg, 0, 6) == prefix.."nok" then wait(.1)
+if string.sub(msg, 0, 6) == prefix.."nok" or override.."nok" then wait(.1)
 game:GetService("Workspace").Terrain["_Game"].Workspace.Obby.Jump.TouchInterest:destroy()
 game:GetService("Workspace").Terrain["_Game"].Workspace.Obby.Jump1.TouchInterest:destroy()
 game:GetService("Workspace").Terrain["_Game"].Workspace.Obby.Jump2.TouchInterest:destroy()
@@ -65,7 +66,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 7) == prefix.."movebp" then wait(.1)
+if string.sub(msg:lower(), 0, 7) == prefix.."movebp" or override.."movebp" then wait(.1)
 notif("Moving the baseplate..")
 say("respawn me")
 wait()
@@ -82,7 +83,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 10) == prefix.."movehouse" then wait(.1)
+if string.sub(msg:lower(), 0, 10) == prefix.."movehouse" or override.."movehouse" then wait(.1)
 notif("Moving house..")
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-55.065, 5.747, 68.674))
 wait()
@@ -99,7 +100,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 10) == prefix.."resetpads" then wait(.1)
+if string.sub(msg:lower(), 0, 10) == prefix.."resetpads" or override.."resetpads" then wait(.1)
 notif("Resetting pads..")
 wait(0.1)
 fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
@@ -108,19 +109,19 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 5) == prefix.."pads" then
+if string.sub(msg:lower(), 0, 5) == prefix.."pads" or override.."pads" then
 notif("Tped to pads")
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-32.7, 8.22999954, 94.5))
 end
 	
-if string.sub(msg:lower(), 0, 6) == prefix.."house" then
+if string.sub(msg:lower(), 0, 6) == prefix.."house" or override.."house" then
 notif("Tped to house")
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-28.6829948, 8.2299995, 66.4913253))
 end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 4) == prefix.."afk" then
+if string.sub(msg:lower(), 0, 4) == prefix.."afk" or override.."afk" then
 	notif("Telling everyone you're afk..")
 	say("m i'm afk now..")
 	say("blind all")
@@ -128,7 +129,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 6) == prefix.."unafk" then
+if string.sub(msg:lower(), 0, 6) == prefix.."unafk" or override.."unafk" then
 	notif("Telling everyone you're back..")
 	say("m i'm back.")
 	say("unblind all")
