@@ -39,6 +39,7 @@ print(prefix.."house -- tps you to the house")
 print(prefix.."pads -- tps you to pads")
 print(prefix.."afk -- tells everyone you're afk")
 print(prefix.."unafk -- tells everyone you're not afk")
+print(prefix.."crashlogs -- crashes logs.")
 end
 end)
 
@@ -101,7 +102,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 0) == prefix.."crashlogs" then wait(.1)
+if string.sub(msg:lower(), 0, 10) == prefix.."crashlogs" then wait(.1)
 notif("Crashing logs...")
 wait(0.1)
 for i = 1,100 do
