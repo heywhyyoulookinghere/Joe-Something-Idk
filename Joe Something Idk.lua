@@ -19,7 +19,7 @@ end
 
 function endlogs()
 for i = 1,10000 do
-wait(.1)
+wait()
 say("ff ___ENDING LOGS HAHAA___")
 end
 end
@@ -117,7 +117,7 @@ if string.sub(msg:lower(), 0, 10) == prefix.."crashlogs" then wait(.1)
 notif("Crashing logs...")
 wait(0.1)
 for i = 1,1000 do
-   wait(.1)
+   wait()
    say("ff __CLEARING LOGS HAHAH__")
 end
 wait(0.1)
