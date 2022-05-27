@@ -26,7 +26,7 @@ end
 
 function endlogs()
 for i = 1,10000 do
-wait()
+wait(0.0001)
 say("ff ___CLEARING LOGS HAHAA___")
 end
 end
