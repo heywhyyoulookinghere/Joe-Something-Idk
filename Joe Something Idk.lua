@@ -115,7 +115,6 @@ say("skydive me")
 wait(.1)
 say("reset me")
 wait(.1)
-endlogs()
 end
 end)
 
