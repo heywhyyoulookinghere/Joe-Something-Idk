@@ -21,7 +21,7 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg, 0, 9) == prefix.."coolcmds" then wait(.1)
+if string.sub(msg:lower(), 0, 9) == prefix.."coolcmds" then wait(.1)
 notif("Check console for commands.")
 wait(.1)
 print("---------------------MAIN COMMANDS--------------------------")
