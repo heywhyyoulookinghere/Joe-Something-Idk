@@ -27,14 +27,14 @@ end)
 game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 6) == prefix.."fixbp" then
  local plr = string.sub(msg:lower(), 9)
-		game.Players:Chat(prefix.."capture "..plr)
+		say(prefix.."capture "..plr)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-500.99981689453, 0.10156404972076, 0))
 		wait(0.10)
-		game.Players:Chat("jail me")
-		game.Players:Chat("tp "..plr.." me")
+		say("jail me")
+		say("tp "..plr.." me")
 		wait(0.25)
 		
-		local target = Workspace_Folder.Baseplate
+		local target = Terrain._Game.Workspace.Baseplate
 		function movepart()
 			local cf = game.Players.LocalPlayer.Character.HumanoidRootPart
 			local looping = true
