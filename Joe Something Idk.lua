@@ -25,18 +25,6 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 8) == prefix.."capture " then
-notif("Capturing person...")
-wait(.1)
-say("freeze "..string.sub(msg:lower(), 9, 9))
-say("name "..string.sub(msg:lower(), 9, 9))
-say("thaw "..string.sub(msg:lower(), 9, 9))
-wait(.1)
-notif("Captured them!")
-end
-end)
-
-game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 9) == prefix.."coolcmds" then wait(.1)
 notif("Check console for commands.")
 wait(.1)
@@ -52,7 +40,6 @@ print(prefix.."pads -- tps you to pads")
 print(prefix.."afk -- tells everyone you're afk")
 print(prefix.."unafk -- tells everyone you're not afk")
 print(prefix.."crashlogs -- crashes logs.")
-print(prefix.."capture -- capture someone.")
 end
 end)
 
