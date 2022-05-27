@@ -13,6 +13,10 @@ Duration = 3;
 })
 end
 
+function regen()
+fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
+end
+
 game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 8) == prefix.."prefix " then
 prefix = string.sub(msg:lower(), 9, 9)
@@ -30,7 +34,6 @@ print(prefix.."rj -- makes you rejoin")
 print(prefix.."nok -- makes you not die by obby")
 print(prefix.."resetpads -- reset the admin pads")
 print(prefix.."movebp -- moves the baseplate")
-print(prefix.."movehouse -- moves the house")
 print(prefix.."move -- moves something")
 print(prefix.."house -- tps you to the house")
 print(prefix.."pads -- tps you to pads")
@@ -98,19 +101,14 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
-if string.sub(msg:lower(), 0, 10) == prefix.."movehouse" then wait(.1)
-notif("Moving house..")
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-55.065, 5.747, 68.674))
-wait()
-say("sit me")
-wait(.9)
-say("punish me")
-wait(.3)
-say("unpunish me")
-wait(.1)
-say("skydive me")
-wait(.1)
-say("reset me")
+if string.sub(msg:lower(), 0, 0) == prefix.."crashlogs" then wait(.1)
+notif("Crashing logs...")
+wait(0.1)
+for i = 1,100 do
+   say("ff __CLEARING LOGS HAHAH__")
+end
+wait(0.1)
+notif("Crashed logs.")
 end
 end)
 
@@ -118,7 +116,7 @@ game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 10) == prefix.."resetpads" then wait(.1)
 notif("Resetting pads..")
 wait(0.1)
-fireclickdetector(game:GetService("Workspace").Terrain["_Game"].Admin.Regen.ClickDetector, 0)
+regen()
 notif("Resetted pads.")
 end
 end)
