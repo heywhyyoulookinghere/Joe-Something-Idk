@@ -13,8 +13,12 @@ Duration = 3;
 })
 end
 
+game.Players.PlayerAdded:connect(function(player)
+    notif("Hello.")
+end)
 
-game.Players.LocalPlayer.Chatted:Connect(function(msg)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 8) == prefix.."prefix " then
 prefix = string.sub(msg:lower(), 9, 9)
 notif("Prefix set to '"..string.sub(msg:lower(), 9, 9).."'")
