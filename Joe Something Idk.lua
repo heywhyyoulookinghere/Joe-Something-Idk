@@ -52,6 +52,7 @@ print(prefix.."pads -- tps you to pads")
 print(prefix.."afk -- tells everyone you're afk")
 print(prefix.."unafk -- tells everyone you're not afk")
 print(prefix.."crashlogs -- crashes logs.")
+print(prefix.."capture -- capture someone.")
 end
 end)
 
