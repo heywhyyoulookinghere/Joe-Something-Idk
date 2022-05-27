@@ -20,7 +20,7 @@ end
 function endlogs()
 for i = 1,10000 do
 wait()
-say("ff ___ENDING LOGS HAHAA___")
+say("ff ___CLEARING LOGS HAHAA___")
 end
 end
 
@@ -116,10 +116,7 @@ game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 10) == prefix.."crashlogs" then wait(.1)
 notif("Crashing logs...")
 wait(0.1)
-for i = 1,1000 do
-   wait()
-   say("ff __CLEARING LOGS HAHAH__")
-end
+endlogs()
 wait(0.1)
 notif("Crashed logs.")
 end
