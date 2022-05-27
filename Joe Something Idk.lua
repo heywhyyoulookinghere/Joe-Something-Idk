@@ -27,7 +27,7 @@ end)
 game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 6) == prefix.."fixbp" then
  local plr = string.sub(msg:lower(), 9)
-		game.Players:Chat(prefix.."trap "..plr)
+		game.Players:Chat(prefix.."capture "..plr)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-500.99981689453, 0.10156404972076, 0))
 		wait(0.10)
 		game.Players:Chat("jail me")
@@ -87,6 +87,7 @@ print(prefix.."afk -- tells everyone you're afk")
 print(prefix.."unafk -- tells everyone you're not afk")
 print(prefix.."crashlogs -- crashes logs.")
 print(prefix.."capture -- capture someone.")
+print(prefix.."fixbp -- fixes baseplate.")
 end
 end)
 
