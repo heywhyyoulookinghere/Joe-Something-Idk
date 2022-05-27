@@ -26,12 +26,9 @@ end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 6) == prefix.."fixbp" then
- local plr = string.sub(msg:lower(), 9)
-		say(prefix.."capture "..plr)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(-500.99981689453, 0.10156404972076, 0))
 		wait(0.10)
 		say("jail me")
-		say("tp "..plr.." me")
 		wait(0.25)
 		
 		local target = Terrain._Game.Workspace.Baseplate
@@ -50,11 +47,7 @@ if string.sub(msg:lower(), 0, 6) == prefix.."fixbp" then
 			wait(0.25)
 			looping = false
 		end
-	movepart()
-wait(0.75)
-		
-	game.Players:Chat("tp me "..plr)
-end
+    movepart()
 end
 end)
 
@@ -62,9 +55,9 @@ game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 9) == prefix.."capture" then
 notif("Capturing person...")
 wait(.1)
-say("freeze "..string.sub(msg:lower(), 12))
-say("name "..string.sub(msg:lower(), 12))
-say("thaw "..string.sub(msg:lower(), 12))
+say("freeze "..string.sub(msg:lower(), 11))
+say("name "..string.sub(msg:lower(), 11))
+say("thaw "..string.sub(msg:lower(), 11))
 wait(.1)
 notif("Captured them!")
 end
