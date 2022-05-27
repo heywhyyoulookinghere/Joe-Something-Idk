@@ -25,6 +25,18 @@ end
 end)
 
 game.Players.LocalPlayer.Chatted:connect(function(msg)
+if string.sub(msg:lower(), 0, 9) == prefix.."capture" then
+notif("Capturing person...")
+wait(.1)
+say("freeze "..string.sub(msg:lower(), 12))
+say("name "..string.sub(msg:lower(), 12))
+say("thaw "..string.sub(msg:lower(), 12))
+wait(.1)
+notif("Captured them!")
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
 if string.sub(msg:lower(), 0, 9) == prefix.."coolcmds" then wait(.1)
 notif("Check console for commands.")
 wait(.1)
